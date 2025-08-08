@@ -1,0 +1,4 @@
+opencv-python
+numpy
+groq
+diffusers==0.30.2
