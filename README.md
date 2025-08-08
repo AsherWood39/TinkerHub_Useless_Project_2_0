@@ -159,11 +159,18 @@ graph TD
 [Watch the Demo](link_to_your_demo)
 *See the Intrusive Thoughts Generator in action, transforming everyday patterns into extraordinary stories!*
 
+# Additional Demos
+[Link to the Live Demo Hosted in Streamlit](https://tinkerappuselessproject20-f2bg8tneaxdphqizzf55qd.streamlit.app/)
+
 #### Try it yourself!
 1. Upload any image
 2. Watch as the AI detects interesting patterns
 3. Enjoy the creative story it generates
 4. Engage with the AI's observations about the details
+
+## Team Contributions
+- Athishta P A: Research, Development, Deployment
+- Harikesh R Menon: Research, AI, LLMs
 
 ### Future Enhancements
 1. **Pattern Recognition**
