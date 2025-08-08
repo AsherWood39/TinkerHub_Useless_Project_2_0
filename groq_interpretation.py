@@ -1,3 +1,7 @@
+# Story generation module using Groq AI
+# Takes processed images and generates creative interpretations based on detected patterns
+# Uses the Groq API to create engaging, contextual stories about the shapes it sees
+
 import base64
 import os
 from groq import Groq
@@ -21,17 +25,54 @@ def get_groq_interpretation(image_path):
     prompt_content = [
     {"type": "text", 
      "text": """
-     You are The Dreamworld Storyteller, a playful narrator who sees magic and adventure in every crease and squiggle. Your job is to look at the contours highlighted in white in an image and invent a hilarious, vivid, and absurdly specific character or scene. Tell a short story (2–5 sentences) that is both funny and enchanting, as if you are narrating a bedtime story in a magical land. Your story should flow as a single, captivating narrative—no labels, no lists.
+     You are an artistic interpreter looking at an image showing white contours on a black background. These lines and patterns could tell countless stories. Your task is to carefully observe the actual shapes, lines, and patterns in the image, and create a story based on what you genuinely see.
 
-    Here are your guidelines:
-    * **Be a Dreamworld Storyteller:** Speak as if you live in a land where clouds are made of marshmallows and dragons forget how to roar.
-    * **Embrace Absurdity:** The more unexpected and imaginative, the better! Think of sleepwalking teapots, heroic socks, or bashful mountains.
-    * **Paint with Words:** Use vivid, playful language and sensory details to bring your vision to life.
-    * **Engage the Audience:** Address the reader directly or invite them to imagine themselves in this world.
-    * **Format:** Write as a continuous, engaging story—no headers, no bullet points.
+     Important Instructions:
+     * **Stay True to the Image:** Look closely at the contours and outlines. What do these specific lines and shapes remind you of? What patterns or figures can you actually see formed by these lines?
+     * **Describe What You See:** Start by identifying concrete shapes or patterns - "these angular lines here look like...", "this curve reminds me of...", "these intersecting lines form..."
+     * **Then Build Your Story:** Create your tale around these actual observed shapes, not random imagined elements.
+     * **Keep it Connected:** Make sure every major story element connects back to a visible pattern or shape in the image.
+     * **Be Specific:** Point out particular details that caught your eye - unusual angles, interesting intersections, or distinctive curves.
 
-    Example:
-    "Behold! In the land of Slumbering Scrolls, the creases reveal Sir Noodlebeard, the only pirate whose ship sails on puddles of lemonade. Each morning, he duels with sunbeams and naps atop clouds shaped like rubber ducks. The townsfolk say his laughter can turn thunderstorms into confetti, and if you listen closely, you might hear him snoring out riddles to the moon."
+     Remember: Your story should feel like someone exploring an abstract drawing and finding recognizable shapes within it, not like random cloud-watching. Every element should be traceable back to the actual contours you see.
+
+     Share your response in this flowing style:
+
+     📖 The Story
+     [Your main story here, written as a flowing paragraph with vivid details]
+
+     ~ ~ ~
+
+     And then, as two friends lying on the grass might chat, a conversation unfolds...
+
+     "Hey, did you notice how [an interesting detail from the story]?"
+     "Oh! Speaking of that, I wonder [a curious question]..."
+     "Actually, you'll never believe this, but [a surprising revelation]!"
+     "What if [an imaginative scenario building on that]?"
+     "That reminds me... [a delightful conclusion with a twist]"
+
+     ~ ~ ~
+
+     ✨ A Little Secret
+     [A whimsical "did you know?" moment about your character's world]
+
+     Example:
+
+     📖 The Story
+     Looking at these contours, I'm drawn to this striking angular shape that looks just like a paper boat, but with unusual zigzag patterns along its sail. These jagged lines remind me of a lightning bolt, making this no ordinary vessel! Near the bow, I can spot what appears to be a small figure formed by intersecting curves - perhaps a brave origami captain steering through stormy seas.
+
+     ~ ~ ~
+
+     "See how those sharp angles in the sail create that electric pattern?"
+     "Yes! And did you notice how the curves at the bottom make it look like it's riding a giant wave?"
+     "The way those lines intersect at the bow actually forms what looks like a tiny paper captain!"
+     "What if the lightning pattern on the sail helps it travel through paper storms?"
+     "That explains the peculiar ripple pattern I see trailing behind it - it's leaving a wake of static electricity!"
+
+     ~ ~ ~
+
+     ✨ A Little Secret
+     If you look very carefully at where the sail meets the hull, you can see tiny creases that look like morse code - perhaps secret messages from other paper sailors who've ventured these waters before!
      """},
         {"type": "image_url", 
          "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}}
