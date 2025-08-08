@@ -4,11 +4,14 @@
 
 import base64
 import os
+from PIL import Image
 from groq import Groq
 from diffusers import DiffusionPipeline
 from diffusers.utils import load_image
 from huggingface_hub import InferenceClient
 from dotenv import load_dotenv
+import requests 
+import io 
 
 load_dotenv()
 api_key = os.getenv('GROQ_API_KEY')
@@ -87,3 +90,30 @@ def get_groq_interpretation(image_path):
     print("Groq's interpretations:")
     print(interpretations)
     return interpretations
+
+def image_to_image(image_path, story):
+    load_dotenv()
+    HF_API_TOKEN = os.getenv("HF_TOKEN")
+    API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
+
+    if not HF_API_TOKEN:
+        raise ValueError("Hugging Face API token not found. Please set HF_TOKEN in a .env file.")
+
+    headers = {"Authorization": f"Bearer {HF_API_TOKEN}"}
+    payload = {"inputs": story}
+
+    print(f"🎨 Sending prompt to Hugging Face: '{story}'")
+    response = requests.post(API_URL, headers=headers, json=payload)
+
+    if response.status_code == 200:
+        # Handle the binary image data from Hugging Face API
+        image_data = response.content
+        image = Image.open(io.BytesIO(image_data))
+        output_filename = "generated_image.png"
+        image.save(output_filename)
+        print(f"✅ Image saved successfully as '{output_filename}'")
+        return output_filename
+    else:
+        print(f"❌ Hugging Face API Error: {response.status_code}")
+        print(response.json())
+        return None

@@ -2,11 +2,11 @@
 
 # Intrusive Thoughts Generator 🎯
 
-![Project Banner](Add a banner image showing the app interface)
-
-
 ## Basic Details
 ### Team Name: MightCompile
+### Team Members:
+ - Team Lead: Athishta P A - MITS, Varikoli
+ - Member 2 : Harikesh R Menon - MITS, Varikoli
 
 ### Project Description
 Ever looked at a coffee stain and thought it looked like a dragon? Or seen faces in the clouds? This project turns that delightful human tendency to find patterns into an AI-powered storytelling adventure! We take any image, extract its interesting patterns, and let AI weave creative tales about what it "sees."

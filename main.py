@@ -9,6 +9,7 @@ import io
 import os
 from image_cleaning import detect_creases
 from groq_interpretation import get_groq_interpretation
+from groq_interpretation import image_to_image
 
 st.set_page_config(
     page_title="From the world of Imaginations!", 
@@ -65,8 +66,8 @@ if st.session_state.uploaded_file is not None:
             story = get_groq_interpretation(outline_path)
 
             st.subheader("Meet with your Creation!")
-            # generated_image = image_to_image(outline_path, story)
-            # if os.path.exists(generated_image):
-            #     st.image("generated_character.png", caption="A valiant knight born from a crease!")
+            generated_image = image_to_image(outline_path, story)
+            if os.path.exists(generated_image):
+              st.image(generated_image)
             st.markdown("### Time for some Story : ")
             st.write(story)
