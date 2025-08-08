@@ -1,4 +1,4 @@
-opencv-python
+opencv-python-headless
 numpy
 groq
 diffusers==0.30.2
