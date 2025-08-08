@@ -43,30 +43,23 @@ if st.session_state.uploaded_file is not None:
     with col2:
         st.image(image, caption="Uploaded Image", use_container_width=False)
     
-    if st.button("Generate Character"):
+    if st.button("Generate your Utopia"):
         with st.spinner('Analyzing creases and imagining a new character...'):
-            outline_path = detect_creases(uploaded_file)
-            st.success("Character generated successfully!")
+            # Save the uploaded file to disk
+            uploaded_image_path = "uploaded_image.png"
+            image.save(uploaded_image_path)
+            # Pass the file path to detect_creases
+            outline_path = detect_creases(uploaded_image_path)
+            st.success("Got the coolest of outlines!")
 
-            st.subheader("Your Character's Outline")
-            st.image(outline_path, caption="The outline created from your creases.")
+            st.subheader("Would you like to see the outline?")
+            st.image(outline_path, caption="The outline created from the chaos.")
 
             story = get_groq_interpretation(outline_path)
 
-            st.subheader("Meet our new friend!")
-            generated_image = image_to_image(outline_path, story)
-            if os.path.exists(generated_image):
-                st.image("generated_character.png", caption="A valiant knight born from a crease!")
-            st.markdown("### The Story")
+            st.subheader("Meet with your Creation!")
+            # generated_image = image_to_image(outline_path, story)
+            # if os.path.exists(generated_image):
+            #     st.image("generated_character.png", caption="A valiant knight born from a crease!")
+            st.markdown("### Time for some Story : ")
             st.write(story)
-
-# from flask import Flask, request, jsonify
-
-# app = Flask(__name__)
-
-# @app.route('/api/hello', methods=['GET'])
-# def hello():
-#     return jsonify({'message': 'Hello from Python!'})
-
-# if __name__ == '__main__':
-#     app.run(port=5000)
