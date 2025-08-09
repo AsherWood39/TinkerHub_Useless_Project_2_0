@@ -160,10 +160,7 @@ graph TD
 ### Project Demo
 
 #### Video Demo
-Watch the Demo : 
-
-Uploading Demo_Video.mp4…
-
+[Watch the Demo] : (https://drive.google.com/file/d/19OVuFp0QRVhqmT67CXcRRQcwCDgmzt7e/view?usp=sharing)
 …
 *See the Intrusive Thoughts Generator in action, transforming everyday patterns into extraordinary stories!*
 
