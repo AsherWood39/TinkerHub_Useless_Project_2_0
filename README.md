@@ -1,4 +1,6 @@
-<img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
+
+https://github.com/user-attachments/assets/dd4e1932-471d-460e-907e-9aa280cf415b
+![generated_image](https://github.com/user-attachments/assets/4f2ba6c3-c2bd-4a41-946c-f5b160b29fbd)<img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 # Chinthavishtayaya Shyamala
 
@@ -118,16 +120,17 @@ streamlit run main.py
 ### Project Documentation
 
 #### Screenshots
-![Upload Interface](screenshots\upload.jpg)
+![Upload](https://github.com/user-attachments/assets/dc6cd2c2-8534-422f-8dfd-16fe006d60d2)
+
 *The main interface where users can upload their images*
 
-![Pattern Detection](screenshots\traced_image.jpg)
+![Pattern Detection](https://github.com/user-attachments/assets/3619ad61-9a6e-4d30-b8d8-58bbb188ca72)
 *Example of pattern detection on a coffee stain image*
 
-![Image Generation](screenshots\generated_image.jpg)
+![Image Generation](https://github.com/user-attachments/assets/3cedc1ab-fe44-4a30-9014-fc9af90017ca)
 *AI-generated image with most closeness to the detected patterns*
 
-![Story Generation](screenshots\story.jpg)
+![Story Generation](https://github.com/user-attachments/assets/4631a203-ed77-444a-965d-61582c5cd1c5)
 *AI-generated story with conversation about the detected patterns*
 
 #### Project Workflow
@@ -159,7 +162,7 @@ graph TD
 ### Project Demo
 
 #### Video Demo
-[Watch the Demo](screenshots\Demo_Video.mp4)
+Watch the Demo : Uploading Demo_Video.mp4…
 *See the Intrusive Thoughts Generator in action, transforming everyday patterns into extraordinary stories!*
 
 # Additional Demos
