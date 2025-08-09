@@ -1,6 +1,6 @@
 
 https://github.com/user-attachments/assets/dd4e1932-471d-460e-907e-9aa280cf415b
-![generated_image](https://github.com/user-attachments/assets/4f2ba6c3-c2bd-4a41-946c-f5b160b29fbd)<img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
+<img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 # Chinthavishtayaya Shyamala
 
@@ -162,7 +162,11 @@ graph TD
 ### Project Demo
 
 #### Video Demo
-Watch the Demo : Uploading Demo_Video.mp4…
+Watch the Demo : 
+
+Uploading Demo_Video.mp4…
+
+…
 *See the Intrusive Thoughts Generator in action, transforming everyday patterns into extraordinary stories!*
 
 # Additional Demos
