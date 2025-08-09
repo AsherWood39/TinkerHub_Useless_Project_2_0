@@ -1,6 +1,6 @@
 <img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
-# Intrusive Thoughts Generator 🎯
+# Chinthavishtayaya Shyamala
 
 ## Basic Details
 ### Team Name: MightCompile
@@ -18,7 +18,7 @@ People are spending too much time being productive and not enough time finding s
 We built an AI-powered "Professional Pattern Storyteller" that:
 1. Takes any image and finds interesting patterns in it
 2. Transforms these patterns into high-contrast white lines on a black background
-3. Uses Groq AI to create whimsical stories about what it sees
+3. Uses Gemini AI to create whimsical stories about what it sees
 4. Engages in a playful conversation about the details it noticed
 
 It's like having a creative writing partner who's always ready to turn mundane patterns into magical stories!
@@ -40,7 +40,7 @@ It's like having a creative writing partner who's always ready to turn mundane p
    - Detects edges using Canny algorithm
    - Creates high-contrast contour images
 
-2. **Story Generation** (`groq_interpretation.py`):
+2. **Story Generation** (`gemini_interpretation.py`):
    - Processes images for AI interpretation
    - Crafts detailed prompts for the AI
    - Generates creative stories and conversations
@@ -85,7 +85,7 @@ We used streamlit to provide an intuitive flow:
 
 #### Prerequisites
 - Python 3.8 or higher
-- Groq API key
+- Gemini API key
 - OpenCV
 
 #### Installation
@@ -118,13 +118,16 @@ streamlit run main.py
 ### Project Documentation
 
 #### Screenshots
-![Upload Interface](screenshots/upload.png)
+![Upload Interface](screenshots\upload.jpg)
 *The main interface where users can upload their images*
 
-![Pattern Detection](screenshots/pattern.png)
+![Pattern Detection](screenshots\traced_image.jpg)
 *Example of pattern detection on a coffee stain image*
 
-![Story Generation](screenshots/story.png)
+![Image Generation](screenshots\generated_image.jpg)
+*AI-generated image with most closeness to the detected patterns*
+
+![Story Generation](screenshots\story.jpg)
 *AI-generated story with conversation about the detected patterns*
 
 #### Project Workflow
@@ -156,7 +159,7 @@ graph TD
 ### Project Demo
 
 #### Video Demo
-[Watch the Demo](link_to_your_demo)
+[Watch the Demo](screenshots\Demo_Video.mp4)
 *See the Intrusive Thoughts Generator in action, transforming everyday patterns into extraordinary stories!*
 
 # Additional Demos
@@ -170,7 +173,7 @@ graph TD
 
 ## Team Contributions
 - Athishta P A: Research, Development, Deployment
-- Harikesh R Menon: Research, AI, LLMs
+- Harikesh R Menon: Research, AI, LLM integration
 
 ### Future Enhancements
 1. **Pattern Recognition**

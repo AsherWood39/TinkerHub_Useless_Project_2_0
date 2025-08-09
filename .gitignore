@@ -1,3 +1,61 @@
+# Environment variables and virtual environments
 .env
 venv/
 .history/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE specific
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Generated images and media
+generated_image.png
+*.jpg
+*.jpeg
+*.png
+!crumbled.jpeg  # Keep the original input image
+
+# Machine Learning and API
+.cache/
+model_cache/
+huggingface/
+*.h5
+*.pkl
+*.pth
+
+# Logs and debugging
+*.log
+logs/
+.pytest_cache/
+coverage.xml
+.coverage
+
+# OS specific
+.DS_Store
+Thumbs.db
+desktop.ini

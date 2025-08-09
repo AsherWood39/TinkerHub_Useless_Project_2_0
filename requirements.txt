@@ -4,3 +4,4 @@ groq
 diffusers==0.30.2
 streamlit
 python-dotenv
+google.generativeai

@@ -8,8 +8,8 @@ from PIL import Image
 import io
 import os
 from image_cleaning import detect_creases
-from groq_interpretation import get_groq_interpretation
-from groq_interpretation import image_to_image
+from image_interpretation import get_gemini_interpretation
+from image_interpretation import image_to_image
 
 st.set_page_config(
     page_title="From the world of Imaginations!", 
@@ -18,7 +18,7 @@ st.set_page_config(
 )
 
 with st.container():
-    st.title("Intrusive thoughts!")
+    st.title("Chinthavishtayaya Shyamala")
     st.markdown("Upload a picture of your choice, and let's turn its unique outline into a fictional world with a story.")
     
     if 'uploaded_file' not in st.session_state:
@@ -63,10 +63,10 @@ if st.session_state.uploaded_file is not None:
             with col2:
                 st.image(outline_path, caption="The outline created from the chaos.", use_container_width=True)
 
-            story = get_groq_interpretation(outline_path)
+            story = get_gemini_interpretation(outline_path)
 
             st.subheader("Meet with your Creation!")
-            generated_image = image_to_image(outline_path, story)
+            generated_image = image_to_image(story)
             if os.path.exists(generated_image):
               st.image(generated_image)
             st.markdown("### Time for some Story : ")
